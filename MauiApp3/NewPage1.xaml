@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label 
+            Text="أهلا بكم مع برنامج هيثم, للإستفادة من جميع خدماتنا يرجى تسجيل الدخول!"
+            />
+        
+<Entry
+    x:Name="txtName"
+    Placeholder="الرجاء قم بإدخال إسم المستخدم" 
+    
+    />
+        <Label
+            Text="قم بإدخال كلمة المرور"
+            
+/>
+        <Entry
+            Placeholder="أدخل كلمة مرور صحيحة"
+            IsPassword="True"
+            x:Name="pas"
+           Text=""
+            />
+        <Label
+    
+    Text="coucher la case من أجل حفظ كلمة المرور"
+    />
+        <CheckBox
+                   CheckedChanged="check_CheckedChanged"   
+            x:Name="check"
+            />
+        <Button
+x:Name="valider"
+            Text="إضغط هنا لتسجيل الدخول"
+ Clicked="valider_Clicked"           
+            />
+        <Button
+            x:Name="close"
+            Text="أو إضغط هنا للخروج من هذه الصفحة"
+    Clicked="close_Clicked" 
+           
+            />
+    </VerticalStackLayout>
+</ContentPage>
