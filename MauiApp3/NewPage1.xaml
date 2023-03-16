@@ -9,6 +9,7 @@
             />
         
 <Entry
+    Text=""
     x:Name="txtName"
     Placeholder="الرجاء قم بإدخال إسم المستخدم" 
     
@@ -23,24 +24,27 @@
             x:Name="pas"
            Text=""
             />
-        <Label
-    
-    Text="coucher la case من أجل حفظ كلمة المرور"
-    />
-        <CheckBox
+        <HorizontalStackLayout>
+            <CheckBox
                    CheckedChanged="check_CheckedChanged"   
             x:Name="check"
             />
-        <Button
+            <Label
+    
+    Text="coucher la case من أجل حفظ كلمة المرور"
+    />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Button
 x:Name="valider"
             Text="إضغط هنا لتسجيل الدخول"
  Clicked="valider_Clicked"           
             />
         <Button
-            x:Name="close"
-            Text="أو إضغط هنا للخروج من هذه الصفحة"
-    Clicked="close_Clicked" 
-           
+            x:Name="oup"
+ Text="إذا نسيت كلمة المرور إضغط هنا"
+      Clicked="oup_Clicked"   
             />
-    </VerticalStackLayout>
+    </HorizontalStackLayout>
+      </VerticalStackLayout>
 </ContentPage>

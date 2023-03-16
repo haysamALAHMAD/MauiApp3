@@ -2,10 +2,13 @@ namespace MauiApp3;
 
 public partial class NewPage1 : ContentPage
 {
+    
     public NewPage1()
     {
         InitializeComponent();
-    }
+      
+   
+         }
 
     private void check_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
@@ -14,18 +17,36 @@ public partial class NewPage1 : ContentPage
 
     private void valider_Clicked(object sender, EventArgs e)
     {
-        if (txtName.Text == null && pas.Text == null)
+        txtName.Text.ToLower().Trim();
+        if (txtName.Text.Trim() == "" ||  pas.Text.Trim() == "")
         {
             DisplayAlert(" ‰»ÌÂ ", "«·—Ã«¡ ≈„·ƒ «·ÕﬁÊ· «·”«»ﬁ… ", "„Ê«›ﬁ");
+            txtName.Focus();
         }
         else 
         {
-            DisplayAlert("„»—Êﬂ","·ﬁœ  „  ”ÃÌ· «·œŒÊ· »‰Ã«Õ","„Ê«›ﬁ");
+           string strChek = " „ Õ›Ÿ ﬂ·„… «·„—Ê—";
+            if (!check.IsChecked) 
+            {
+                strChek = $"·„ Ì{strChek.Trim()}";
+                    }
+            DisplayAlert("„»—Êﬂ",$"·ﬁœ  „  ”ÃÌ· «·œŒÊ· »‰Ã«Õ, {strChek}","„Ê«›ﬁ");
         }
     }
-
-    private void close_Clicked(object sender, EventArgs e)
+    int count = 0;  
+    private void oup_Clicked(object sender, EventArgs e)
     {
+        pas.Focus();
+
+        count++;
         
+        if(count == 1)
+
+       oup.Text = "≈Õ›Ÿ ﬂ·„… «·„—Ê— «·ÃœÌœ…";
+else            
+        
+        
+            oup.Text = "≈–« ‰”Ì  ﬂ·„… «·„—Ê— ≈÷€ÿ Â‰« ";                
+
     }
 }
